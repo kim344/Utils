@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Utils</string>
+
+    <string name="recycler">Recycler</string>
+    <string name="fragment">Fragment</string>
+    <string name="tabLayout">TabLayout + ViewPager</string>
+    <string name="retrofit2">Retrofit2</string>
+    <string name="permission">Permission</string>
+    <string name="dialog">Dialog</string>
+
+    <string name="txt_rc_horizontal">Horizontal RecyclerView</string>
+    <string name="txt_rc_vertical">Vertical RecyclerView</string>
+
+    <string name="fragment_page1">Page No.1</string>
+    <string name="fragment_page2">Page No.2</string>
+    <string name="fragment_page3">Page No.3</string>
+
+    <string name="tabLayout_text">Tab Layout</string>
+    <string name="txt_tabLayout_fragment_home">Home Fragment</string>
+    <string name="txt_tabLayout_fragment_game">Game Fragment</string>
+    <string name="txt_tabLayout_fragment_movie">Movie Fragment</string>
+    <string name="txt_tabLayout_fragment_book">Book Fragment</string>
+    <string name="txt_tabLayout_fragment_news">News Fragment</string>
+
+    <string name="btn_check">Permission Check</string>
+
+    <string name="btn_progress_dialog">Progress Dialog</string>
+    <string name="btn_yes_no_basic_dialog">Basic Dialog (Yes/No)</string>
+    <string name="btn_confirm_basic_dialog">Basic Dialog Confirm</string>
+    <string name="btn_yes_no_custom_dialog">Custom Dialog (Yes/No)</string>
+    <string name="btn_confirm_custom_dialog">Custom Dialog (Activity)</string>
+    <string name="txt_title_yes_no_custom_dialog">Custom Dialog Title</string>
+    <string name="txt_contents_yes_no_custom_dialog">Custom Dialog Contents</string>
+
+    <string name="dialog_no">No</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="activity_confirm">OK</string>
+
+</resources>

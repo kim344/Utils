@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="5dp"
+    android:id="@+id/item_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_dog_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/dog00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_dog_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="멍멍이"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/img_dog_image"
+        app:layout_constraintTop_toTopOf="@+id/img_dog_image" />
+
+    <TextView
+        android:id="@+id/txt_dog_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나이"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/txt_dog_name"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dog_name" />
+
+    <TextView
+        android:id="@+id/txt_dog_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성별"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/txt_dog_age"
+        app:layout_constraintBottom_toBottomOf="@id/txt_dog_age"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kim344.utils">
+
+    <!-- 인터넷 사용 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 통신상태 변경 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 네트워크 상태 접근 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- WiFi 상태 변경 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- WiFi 상태 접근 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 내장파일 접근 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 내장파일 사용 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 휴대폰 상태 접근 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 진동 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 화면깨우기 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 핸드폰 번호 불러오기 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name="com.kim344.utils.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.kim344.utils.recycler.RecyclerActivity"/>
+        <activity android:name="com.kim344.utils.fragment.FragmentSampleActivity"/>
+        <activity android:name="com.kim344.utils.tabLayout.TabLayoutActivity"/>
+        <activity android:name="com.kim344.utils.permission.PerMissionActivity"/>
+        <activity android:name="com.kim344.utils.dialog.DialogActivity"/>
+        <activity android:name="com.kim344.utils.recycler.RecyclerDetailActivity"/>
+        <activity android:name="com.kim344.utils.retrofit2.RetrofitActivity"/>
+
+    </application>
+
+</manifest>
