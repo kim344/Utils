@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
+import android.util.Log;
 
 public class NetUtil 
 {
@@ -41,7 +42,7 @@ public class NetUtil
 				{
 					state = STATE_NONE;
 					isDisconnect = true;
-					CLog.d(TAG, "Wi-Fi 끊어졌다!");
+					Log.d(TAG, "Wi-Fi 끊어졌다!");
 				}
 			} 
 			else if (state == STATE_MOBILE_CONNECTED)
@@ -50,13 +51,13 @@ public class NetUtil
 				{
 					state = STATE_NONE;
 					isDisconnect = true;
-					CLog.d(TAG, "3G/4G 끊어졌다!");
+					Log.d(TAG, "3G/4G 끊어졌다!");
 				}
 			}
 		} 
 		catch (Exception e)
 		{
-			CLog.e(TAG, "exception : [" + e + "]");
+			Log.e(TAG, "exception : [" + e + "]");
 		}
 		
 		return isDisconnect;

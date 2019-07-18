@@ -34,26 +34,18 @@ public class CustomActivityDialog extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-        this.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-
         setContentView(R.layout.dialog_custom_confirm);
 
-        DisplayMetrics displayMetrics = mContext.getApplicationContext().getResources().getDisplayMetrics();
+        DisplayMetrics displayMetrics = mContext.getApplicationContext().getResources().getDisplayMetrics();    // 디바이스 크기
 
-        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-        lp.copyFrom(getWindow().getAttributes());
-        lp.width = (int) (displayMetrics.widthPixels * 0.89);
-        lp.height = (int) (displayMetrics.heightPixels * 0.35);
-        lp.gravity = Gravity.CENTER;
-        lp.y = -50;
+        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+        layoutParams.copyFrom(getWindow().getAttributes());
+        layoutParams.width = (int) (displayMetrics.widthPixels * 0.89);     // 다이얼로그 너비 %
+        layoutParams.height = (int) (displayMetrics.heightPixels * 0.35);   // 다이얼로그 높이 %
+        layoutParams.gravity = Gravity.CENTER;
+        this.getWindow().setAttributes(layoutParams);
 
-        this.getWindow().setAttributes(lp);
-
-        //다이얼로그 밖 터치 막기
-        setCancelable(false);
+        setCancelable(false);   // 다이얼로그 밖 터치 불가
 
         mTxtTitle = findViewById(R.id.dialog_confirm_msg_tv);
         mTxtTitle.setText(mTitle);

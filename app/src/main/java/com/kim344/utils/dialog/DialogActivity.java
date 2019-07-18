@@ -59,9 +59,9 @@ public class DialogActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    private void startProgress(int delay, String msg) {
+    private void startProgress(int delay, String message) {
         final ProgressDialog progressDialog = new ProgressDialog();
-        progressDialog.progressON(DialogActivity.this, msg);
+        progressDialog.progressON(DialogActivity.this, message);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

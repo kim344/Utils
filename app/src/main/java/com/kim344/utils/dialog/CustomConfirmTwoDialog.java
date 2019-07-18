@@ -30,9 +30,6 @@ public class CustomConfirmTwoDialog extends Dialog implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-//        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
         setContentView(R.layout.dialog_custom_confirm_two);
 
         TextView mTxtTitle = findViewById(R.id.confirm_main_tv);
@@ -48,8 +45,7 @@ public class CustomConfirmTwoDialog extends Dialog implements View.OnClickListen
         mTxtOk.setText(mOk);
         mTxtCancel.setText(mCancel);
 
-        //다이얼로그 밖 터치 막기
-        setCancelable(false);
+        setCancelable(false);   // 다이얼로그 밖 터치 불가
     }
 
     @Override

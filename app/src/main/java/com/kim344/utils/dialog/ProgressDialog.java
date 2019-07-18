@@ -31,21 +31,21 @@ public class ProgressDialog {
         }
 
 
-        final ImageView img_loading_frame = (ImageView) progressDialog.findViewById(R.id.iv_frame_loading);
-        if (img_loading_frame != null) {
+        final ImageView imgLoadingFrame = (ImageView) progressDialog.findViewById(R.id.iv_frame_loading);
+        if (imgLoadingFrame != null) {
 
-            img_loading_frame.post(new Runnable() {
+            imgLoadingFrame.post(new Runnable() {
                 @Override
                 public void run() {
-                    Glide.with(activity).load(R.raw.loding).into(img_loading_frame);
+                    Glide.with(activity).load(R.raw.loding).into(imgLoadingFrame);
                 }
             });
 
         }
 
-        TextView tv_progress_message = (TextView) progressDialog.findViewById(R.id.tv_progress_message);
+        TextView txtProgressMessage = (TextView) progressDialog.findViewById(R.id.tv_progress_message);
         if (!TextUtils.isEmpty(message)) {
-            tv_progress_message.setText(message);
+            txtProgressMessage.setText(message);
         }
 
 
@@ -57,9 +57,9 @@ public class ProgressDialog {
             return;
         }
 
-        TextView tv_progress_message = (TextView) progressDialog.findViewById(R.id.tv_progress_message);
+        TextView txtProgressMessage = (TextView) progressDialog.findViewById(R.id.tv_progress_message);
         if (!TextUtils.isEmpty(message)) {
-            tv_progress_message.setText(message);
+            txtProgressMessage.setText(message);
         }
 
     }

@@ -12,7 +12,9 @@ import com.kim344.utils.R;
 
 public class FragmentSampleActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button mBtn1, mBtn2, mBtn3;
+    Button mBtn1;
+    Button mBtn2;
+    Button mBtn3;
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
     FragmentPage1 mFragmentPage1;
@@ -36,7 +38,7 @@ public class FragmentSampleActivity extends AppCompatActivity implements View.On
         mFragmentPage2 = new FragmentPage2();
         mFragmentPage3 = new FragmentPage3();
 
-        setFrag(0);
+        setFrag(0); // 시작 페이지
     }
 
     @Override

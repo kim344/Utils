@@ -25,6 +25,7 @@ import android.net.NetworkInfo;
 import android.os.Environment;
 import android.text.InputType;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
@@ -190,7 +191,7 @@ public class AndroidUtils
 	{
 //		File file = new File(getApplicationImagePath(context) + "/images/" + imageName);
 		File file = new File(getApplicationImagePath(context) + imageName);
-		CLog.d("IMAGE", file.getAbsolutePath() + " file is exists? : [" + file.exists() + "]");
+		Log.d("IMAGE", file.getAbsolutePath() + " file is exists? : [" + file.exists() + "]");
 		return file.exists();
 	}
 	
@@ -470,8 +471,8 @@ public class AndroidUtils
 			
 			Bitmap src = BitmapFactory.decodeFile(path, options);
 //			
-//			CLog.d(TAG, "bitmap width : [" + src.getWidth() + "], height : [" + src.getHeight() + "]");
-//			CLog.d(TAG, "target image view width : [" + v.getWidth() + "], height : [" + v.getWidth() + "]");
+//			Log.d(TAG, "bitmap width : [" + src.getWidth() + "], height : [" + src.getHeight() + "]");
+//			Log.d(TAG, "target image view width : [" + v.getWidth() + "], height : [" + v.getWidth() + "]");
 			
 			ExifInterface exif = new ExifInterface(path);
 		    int exifOrientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
@@ -490,7 +491,7 @@ public class AndroidUtils
 		}
 		catch(Exception e)
 		{
-			CLog.e("AndroidUtils", "image scale exception : [" + e + "]", e);
+			Log.e("AndroidUtils", "image scale exception : [" + e + "]", e);
 		}
 	}
 	
@@ -520,7 +521,7 @@ public class AndroidUtils
 		}
 		catch(Exception e)
 		{
-			CLog.e("AndroidUtils", "image scale exception : [" + e + "]", e);
+			Log.e("AndroidUtils", "image scale exception : [" + e + "]", e);
 		}
 	}
 	
@@ -553,7 +554,7 @@ public class AndroidUtils
 		}
 		catch(Exception e)
 		{
-			CLog.e("AndroidUtils", "image scale exception : [" + e + "]", e);
+			Log.e("AndroidUtils", "image scale exception : [" + e + "]", e);
 		}
 	}
 	
