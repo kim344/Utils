@@ -52,6 +52,8 @@ public class RecyclerVerticalAdapter extends RecyclerView.Adapter<RecyclerVertic
                 intent.putExtra("position",position);
                 intent.putExtra("img",item.getDogImage());
                 intent.putExtra("name",item.getDogName());
+                intent.putExtra("age",item.getDogAge());
+                intent.putExtra("gender",item.getDogGender());
                 mContext.startActivity(intent);
             }
         });
