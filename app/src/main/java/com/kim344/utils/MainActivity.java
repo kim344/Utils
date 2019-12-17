@@ -12,9 +12,12 @@ import com.kim344.utils.permission.PerMissionActivity;
 import com.kim344.utils.recycler.RecyclerActivity;
 import com.kim344.utils.retrofit2.RetrofitActivity;
 import com.kim344.utils.tabLayout.TabLayoutActivity;
+import com.kim344.utils.util.CLog;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    String TAG = getClass().getSimpleName();
 
     Button mBtnRecycler;
     Button mBtnFragment;
@@ -49,6 +52,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnRetrofit2.setOnClickListener(this);
         mBtnPermission.setOnClickListener(this);
         mBtnDialog.setOnClickListener(this);
+
+        CLog.i("안녕하세요");
+        CLog.v("안녕하세요");
+        CLog.d("안녕하세요");
+        CLog.w("안녕하세요");
+        CLog.e("안녕하세요");
+
     }
 
     @Override
