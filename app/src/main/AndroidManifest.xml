@@ -4,6 +4,7 @@
     package="com.kim344.utils">
 
     <!-- 인터넷 사용 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 통신상태 변경 -->
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 네트워크 상태 접근 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- WiFi 상태 변경 -->
